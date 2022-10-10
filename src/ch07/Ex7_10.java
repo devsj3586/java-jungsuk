@@ -2,8 +2,12 @@ package ch07;
 
 public class Ex7_10 {
 	public static void main(String[] args) {
-		Unit[] group = { new Marine(), new Tank(), new Dropship() };
-
+//		Unit[] group = { new Marine(), new Tank(), new Dropship() };
+		Unit[] group = new Unit[3]; //  위에꺼를 풀어쓴 코드, 똑같음
+		group[0] = new Marine();
+		group[1] = new Tank();
+		group[2] = new Dropship();
+		
 		for (int i = 0; i < group.length; i++)
 			group[i].move(100, 200);
 	}

@@ -7,7 +7,7 @@ class Ex7_3 {
 	}
 }
 
-class Parent2 { int x=10; }
+class Parent2 { int x=10; } // super.x 와 this.x 둘다가능
 
 class Child2 extends Parent2 {
 	void method() {

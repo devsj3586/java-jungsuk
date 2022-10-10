@@ -47,14 +47,14 @@ class Buyer2 {			  // 고객, 물건을 사는 사람
 	}
 // 뒷 페이지에 계속됩니다.
 	void summary() {	              // 구매한 물품에 대한 정보를 요약해서 보여 준다.
-		int sum = 0;                 // 구입한 물품의 가격합계
-		String itemList ="";         // 구입한 물품목록
+		int sum = 0;                  // 구입한 물품의 가격합계
+		String itemList ="";          // 구입한 물품목록
 
 		// 반복문을 이용해서 구입한 물품의 총 가격과 목록을 만든다.
 		for(int i=0; i<cart.length;i++) {
 			if(cart[i]==null) break;
 			sum += cart[i].price;
-			itemList += cart[i] + ", ";
+			itemList += cart[i].toString() + ", ";
 		}
 		System.out.println("구입하신 물품의 총금액은 " + sum + "만원입니다.");
 		System.out.println("구입하신 제품은 " + itemList + "입니다.");

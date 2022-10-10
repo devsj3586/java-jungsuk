@@ -7,7 +7,7 @@ class Ex7_12 {
 		final static int CONST = 100;   // final static은 상수이므로 허용
 	} 
 
-   static class StaticInner { 
+   static class StaticInner {   
 		int iv = 200; 
 		static int cv = 200;    // static클래스만 static멤버를 정의할 수 있다. 
 	} 

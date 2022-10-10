@@ -2,13 +2,13 @@ package ch07;
 
 class Product {
 	int price;			// 제품의 가격
-	int bonusPoint;	// 제품구매 시 제공하는 보너스점수
+	int bonusPoint;	    // 제품구매 시 제공하는 보너스점수
 
 	Product(int price) {
 		this.price = price;
 		bonusPoint = (int)(price/10.0);	// 보너스점수는 제품가격의 10%
 	}
-}
+}  
 
 class Tv1 extends Product {
 	Tv1() {
@@ -28,7 +28,7 @@ class Computer extends Product {
 
 class Buyer {	// 고객, 물건을 사는 사람
 	int money = 1000;	  // 소유금액
-	int bonusPoint = 0; // 보너스점수
+	int bonusPoint = 0;   // 보너스점수
 
 	void buy(Product p) {
 		if(money < p.price) {
@@ -38,16 +38,19 @@ class Buyer {	// 고객, 물건을 사는 사람
 
 		money -= p.price;            // 가진 돈에서 구입한 제품의 가격을 뺀다.
 		bonusPoint += p.bonusPoint;  // 제품의 보너스 점수를 추가한다.
-		System.out.println(p + "을/를 구입하셨습니다.");
+//		System.out.println(p.toString() + "을/를 구입하셨습니다.");
+		System.out.println(p + "을/를 구입하셨습니다.");//   위 아래는 같은 코드
 	}
 }
 
 class Ex7_8 {
 	public static void main(String args[]) {
 		Buyer b = new Buyer();
-
-		b.buy(new Tv1());
-		b.buy(new Computer());
+		
+		Product p = new Tv1();
+		b.buy(p);
+//		b.buy(new Tv1());		//buy(product p)  이 한분장이 위에 2문장하고 같은것
+		b.buy(new Computer()); 	//buy(product p)
 
 		System.out.println("현재 남은 돈은 " + b.money + "만원입니다.");
 		System.out.println("현재 보너스점수는 " + b.bonusPoint + "점입니다.");
