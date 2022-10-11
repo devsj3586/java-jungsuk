@@ -13,6 +13,6 @@ class Ex8_3 {
 			System.out.println(5);
 		}	// try-catch의 끝
 
-		System.out.println(6);
+		System.out.println(6); 
 	}	// main메서드의 끝
 }

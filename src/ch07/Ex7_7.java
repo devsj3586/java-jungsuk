@@ -12,7 +12,7 @@ class Ex7_7 {
 		fe2 = (FireEngine)car; // 자손타입 ← 조상타입. 형변환 생략 불가
 		fe2.water();
 	}
-}
+} 
 
 class Car {
 	String color;

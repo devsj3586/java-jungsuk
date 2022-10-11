@@ -27,7 +27,7 @@ class Computer extends Product {
 }
 
 class Buyer {	// 고객, 물건을 사는 사람
-	int money = 1000;	  // 소유금액
+	int money = 1000;	  // 소유금액 
 	int bonusPoint = 0;   // 보너스점수
 
 	void buy(Product p) {

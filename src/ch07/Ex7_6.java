@@ -10,5 +10,5 @@ class Ex7_6 {
 
 		// System.out.println("Math.PI :"+Math.PI);
 		out.println("Math.PI :" + PI);
-	}
+	} 
 }

@@ -1,6 +1,6 @@
 package ch08;
 
-class Ex8_1 {
+class Ex8_1 {  // 예외가 발생하지 않았을 때 
 	public static void main(String args[]) {
 			System.out.println(1);			
 			try {
@@ -10,5 +10,5 @@ class Ex8_1 {
 				System.out.println(4);  // 실행되지 않는다.
 			} // try-catch의 끝
 			System.out.println(5);
-	}
+	} 
 }

@@ -2,7 +2,7 @@ package ch07;
 
 class Ex7_13 {
 	class InstanceInner {}
-	static class StaticInner {}
+	static class StaticInner {} 
 
 	// 인스턴스멤버 간에는 서로 직접 접근이 가능하다.
 	InstanceInner iv = new InstanceInner();

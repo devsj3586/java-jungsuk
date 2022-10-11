@@ -12,5 +12,5 @@ class Ex8_6 {
 			e.printStackTrace();
 		}
 		System.out.println("프로그램이 정상 종료되었음.");
-	}
+	} 
 }

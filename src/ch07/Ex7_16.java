@@ -1,10 +1,10 @@
 package ch07;
 
 class Outer3 {
-	int value = 10;	// Outer3.this.value
+	int value = 10;	// Outer3.this.value //외부클래스의 iv 
 
 	class Inner {
-		int value = 20;   // this.value
+		int value = 20;   // this.value  내부클래스이 iv
 
 		void method1() {
 			int value = 30;

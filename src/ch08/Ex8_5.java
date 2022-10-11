@@ -15,5 +15,5 @@ class Ex8_5 {
 		}	// try-catch의 끝
 
 		System.out.println(6);
-	}	// main메서드의 끝
+	}	// main메서드의 끝 
 }

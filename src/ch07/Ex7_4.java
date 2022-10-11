@@ -10,7 +10,7 @@ public class Ex7_4 {
 class Point {
 	int x, y;
 
-	Point(int x, int y) {
+	Point(int x, int y) { 
 		this.x = x;
 		this.y = y;
 	}

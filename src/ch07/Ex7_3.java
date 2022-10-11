@@ -15,4 +15,4 @@ class Child2 extends Parent2 {
 		System.out.println("this.x=" + this.x);
 		System.out.println("super.x="+ super.x);
 	}
-}
+} 

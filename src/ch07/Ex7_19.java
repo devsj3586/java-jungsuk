@@ -10,7 +10,7 @@ class Ex7_19 {
 				public void actionPerformed(ActionEvent e) {
 					System.out.println("ActionEvent occurred!!!");
 				}
-			} // 익명 클래스의 끝
+			} // 익명 클래스의 끝 
 		);
 	} // main의 끝
 } 
