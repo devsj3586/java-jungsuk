@@ -15,4 +15,4 @@ class Ex9_10 {
 		System.out.println(String.join("",strVal,"+",strVal2,"=")+sum);
 		System.out.println(strVal+"+"+strVal2+"="+sum2);
 	}
-}
+} 

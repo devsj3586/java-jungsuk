@@ -7,7 +7,7 @@ class Ex8_9 {
 
 	static void method1() throws Exception {
 		method2();
-	}	// method1의 끝
+	}	// method1의 끝 
 
 	static void method2() throws Exception {
 		throw new Exception();

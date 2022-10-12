@@ -4,15 +4,15 @@ class Person {
 	long id;
 
 	public boolean equals(Object obj) {
-		if(obj instanceof Person)
-			return id ==((Person)obj).id;
-		else
+		if(!(obj instanceof Person))
 			return false;
+		Person p = (Person)obj;
+		return this.id ==p.id;
 	}
 
 	Person(long id) {
 		this.id = id;
-	}
+	} 
 }
 
 class Ex9_2 {

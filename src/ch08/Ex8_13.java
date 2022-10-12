@@ -7,7 +7,7 @@ class Ex8_13 {
 		} catch(InstallException e) {
 			e.printStackTrace();
 		} catch(Exception e) {
-			e.printStackTrace();		
+			e.printStackTrace();		 
 		}
 	} // main의 끝
 
@@ -17,8 +17,8 @@ class Ex8_13 {
 			copyFiles();		// 파일들을 복사한다. 
 		} catch (SpaceException2 e)	{
 			InstallException ie = new InstallException("설치 중 예외발생");
-			ie.initCause(e);
-			throw ie;
+			ie.initCause(e);	// e(spaceException) 예외를 ie(InstallException)에 포함 시킴
+			throw ie;			// ie를 던짐 
 		} catch (MemoryException2 me) {
 			InstallException ie = new InstallException("설치 중 예외발생");
 			ie.initCause(me);
@@ -27,7 +27,7 @@ class Ex8_13 {
 			deleteTempFiles();		// 프로그램 설치에 사용된 임시파일들을 삭제한다.
 		} // try의 끝
 	}
-
+									// Exception 자손만 예외선언 
 	static void startInstall() throws SpaceException2, MemoryException2 { 
 		if(!enoughSpace()) { 		// 충분한 설치 공간이 없으면...
 			throw new SpaceException2("설치할 공간이 부족합니다.");
@@ -35,7 +35,7 @@ class Ex8_13 {
 
 		if (!enoughMemory()) {	// 충분한 메모리가 없으면...
 			throw new MemoryException2("메모리가 부족합니다.");
-//			throw new RuntimeException(new MemoryException("메모리가 부족합니다."));
+//			throw new RuntimeException(new MemoryException("메모리가 부족합니다."));  // 원인 예외 등록 
 		}
 	} // startInstall메서드의 끝
 
