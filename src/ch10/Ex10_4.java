@@ -16,8 +16,9 @@ class Ex10_4 {
 		date.add(Calendar.MONTH, -6);
 		System.out.println(toString(date));
 
+		// 다른 필드에 영향을 주지 않는다.
 		System.out.println("= 31일 후(roll) =");
-		date.roll(Calendar.DATE, 31);
+		date.roll(Calendar.MONTH, -5);
 		System.out.println(toString(date));
 
 		System.out.println("= 31일 후(add) =");

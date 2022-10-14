@@ -5,7 +5,7 @@ import java.util.*;
 class Ex10_1 {
 	public static void main(String[] args) 
 	{  // 기본적으로 현재날짜와 시간으로 설정된다.
-		Calendar today = Calendar.getInstance();	
+		Calendar today = Calendar.getInstance(); // Calendar 객체를 생성	
 		System.out.println("이 해의 년도 : " + today.get(Calendar.YEAR));
  	   System.out.println("월(0~11, 0:1월): " + today.get(Calendar.MONTH));
 	  	System.out.println("이 해의 몇 째 주: " 
