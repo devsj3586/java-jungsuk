@@ -19,7 +19,7 @@ class Ex11_4 {
 				if("".equals(input)) continue;
 
 				if(input.equalsIgnoreCase("q")) {
-					System.exit(0);
+					System.exit(0);  // 프로그램 종료
 				} else if(input.equalsIgnoreCase("help")) {
 					System.out.println(" help - 도움말을 보여줍니다.");
 					System.out.println(" q 또는 Q - 프로그램을 종료합니다.");
@@ -48,7 +48,7 @@ class Ex11_4 {
 	public static void save(String input) {
 		// queue에 저장한다.
 		if(!"".equals(input))
-          q.offer(input);
+          q.offer(input); // 큐에 명령어를 저장
 
 		// queue의 최대크기를 넘으면 제일 처음 입력된 것을 삭제한다.
 		if(q.size() > MAX_SIZE)  // size()는 Collection인터페이스에 정의
