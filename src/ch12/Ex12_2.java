@@ -14,14 +14,15 @@ class Ex12_2 {
 		//  Student s = (Student)it.next(); // 지네릭스를 사용하지 않으면 형변환 필요.
 			Student s = it.next();
 			System.out.println(s.name);
+//			System.out.println(it.next().name); // 이렇게도 가능 
 		}
 	} // main
 }
 
 class Student {
 	String name = "";
-	int ban;
-	int no;
+	int ban;	// 반
+	int no;		// 번호 
 
 	Student(String name, int ban, int no) {
 		this.name = name;

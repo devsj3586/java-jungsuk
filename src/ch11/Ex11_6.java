@@ -4,7 +4,7 @@ import java.util.*;
 
 class Ex11_6 {
 	public static void main(String[] args) {
-		int[]	   arr   = {0,1,2,3,4};
+		int[]	arr   = {0,1,2,3,4};
 		int[][]	arr2D = {{11,12,13}, {21,22,23}};
 
 		System.out.println("arr="+Arrays.toString(arr));
@@ -29,7 +29,7 @@ class Ex11_6 {
 		Arrays.setAll(arr7, i -> (int)(Math.random()*6)+1);
 		System.out.println("arr7="+Arrays.toString(arr7));
 
-		for(int i : arr7) {
+		for(int i : arr7) { // 향상된 for문 
 			char[] graph = new char[i];
 			Arrays.fill(graph, '*');
 			System.out.println(new String(graph)+i);

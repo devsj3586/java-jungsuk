@@ -13,12 +13,13 @@ class Ex12_1 {
 //  	ArrayList<Product> tvList = new ArrayList<Tv>(); // 에러.
 // 		List<Tv>           tvList = new ArrayList<Tv>(); // OK. 다형성
 
-		productList.add(new Tv());
+		productList.add(new Tv()); // public boolean add(Product e) {
 		productList.add(new Audio());
 
+		tvList.add(new Tv()); // public boolean add(Tv e) {
 		tvList.add(new Tv());
-		tvList.add(new Tv());
-
+//		tvList.add(new Audio);  // 에러 
+		
 		printAll(productList);
 		// printAll(tvList); // 컴파일 에러가 발생한다.
 	}

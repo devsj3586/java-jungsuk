@@ -13,7 +13,7 @@ class Juice {
 	public String toString() { return name;                }
 }
 
-class Juicer {
+class Juicer {						// Fruit2와 그 자손 
 	static Juice makeJuice(FruitBox2<? extends Fruit2> box) {
 		String tmp = "";
 
@@ -30,6 +30,8 @@ class Ex12_4 {
 
 		fruitBox.add(new Apple2());
 		fruitBox.add(new Grape2());
+		fruitBox.add(new Grape2());
+		fruitBox.add(new Apple2());
 		appleBox.add(new Apple2());
 		appleBox.add(new Apple2());
 

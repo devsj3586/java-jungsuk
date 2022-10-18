@@ -1,7 +1,7 @@
 package ch11;
 
-import java.util.*;
-import static java.util.Collections.*;
+import java.util.*; 
+import static java.util.Collections.*; // Collections 생략가능 . import문 때문에
 
 class Ex11_19 {
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ class Ex11_19 {
 		addAll(list, 1,2,3,4,5); 
 		System.out.println(list);
 		
-		rotate(list, 2);  // 오른쪽으로 두 칸씩 이동 
+		rotate(list, 2);  // 오른쪽으로 두 칸씩 이동, 반시계방향으로 두번 회전
 		System.out.println(list);
 
 		swap(list, 0, 2); // 첫 번째와 세 번째를 교환(swap)

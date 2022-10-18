@@ -35,9 +35,9 @@ class Ex12_3 {
 class FruitBox<T extends Fruit & Eatable> extends Box<T> {}
 
 class Box<T> {
-	ArrayList<T> list = new ArrayList<T>();
-	void add(T item) { list.add(item);     }
-	T get(int i)     { return list.get(i); }
+	ArrayList<T> list = new ArrayList<T>();		// item을 저장할 list
+	void add(T item) { list.add(item);     }	// 박스에 item을 추가
+	T get(int i)     { return list.get(i); }	// 박스에서 item을 꺼낼때
 	int size()       { return list.size(); }
 	public String toString() { return list.toString();}
 }
