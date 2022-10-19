@@ -30,8 +30,6 @@ class Ex12_4 {
 
 		fruitBox.add(new Apple2());
 		fruitBox.add(new Grape2());
-		fruitBox.add(new Grape2());
-		fruitBox.add(new Apple2());
 		appleBox.add(new Apple2());
 		appleBox.add(new Apple2());
 
