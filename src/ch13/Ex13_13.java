@@ -11,7 +11,7 @@ class Ex13_13 {
 class Account2 {
 	private int balance = 1000; // private으로 해야 동기화가 의미가 있다.
 
-	public  int getBalance() {
+	public synchronized int getBalance() {
 		return balance;
 	}
 
@@ -30,7 +30,7 @@ class RunnableEx13 implements Runnable {
 		while(acc.getBalance() > 0) {
 			// 100, 200, 300중의 한 값을 임으로 선택해서 출금(withdraw)
 			int money = (int)(Math.random() * 3 + 1) * 100;
-			acc.withdraw(money);
+			acc.withdraw(money); // 메서드 호출
 			System.out.println("balance:"+acc.getBalance());
 		}
 	} // run()

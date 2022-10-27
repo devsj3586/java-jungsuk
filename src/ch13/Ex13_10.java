@@ -2,10 +2,9 @@ package ch13;
 
 class Ex13_10 {
 	public static void main(String args[]) {
-		RunImplEx10 r = new RunImplEx10();
-		Thread th1 = new Thread(r, "*");
-		Thread th2 = new Thread(r, "**");
-		Thread th3 = new Thread(r, "***");
+		MyThread th1 = new MyThread("*");
+		MyThread th2 = new MyThread("**");
+		MyThread th3 = new MyThread("***");
 		th1.start();
 		th2.start();
 		th3.start();
@@ -26,13 +25,39 @@ class Ex13_10 {
 	} // main
 }
 
-class RunImplEx10 implements Runnable {
-	public void run() {
-		while(true) {
-			System.out.println(Thread.currentThread().getName());
-			try {
-				Thread.sleep(1000);
-			} catch(InterruptedException e) {}
-		}
-	} // run()
+
+class MyThread implements Runnable {
+	volatile boolean suspended = false;  // volatile 쉽게 바뀌는 변수
+	volatile boolean stopped = false;		// volatile
+	
+	Thread th;
+	
+	MyThread(String name) {
+		th = new Thread(this, name); // Thread(Runnable r, String name)
+	}
+	
+	void start() {
+		th.start();
+	}
+	
+	void stop() {
+		stopped = true;
+	}
+	
+	void suspend() {
+		suspended = true;
+	}
+	void resume() {
+		suspended = false;
+	}
+	 public void run () {
+		 while(!stopped) {
+			 if (!suspended) {
+				 System.out.println(Thread.currentThread().getName());
+				 try {
+					 Thread.sleep(1000);
+				 }catch(InterruptedException e) {}
+			 }
+		 }
+	 }// run()
 }

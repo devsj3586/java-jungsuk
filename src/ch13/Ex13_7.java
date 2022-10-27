@@ -4,7 +4,7 @@ class Ex13_7 implements Runnable  {
 	static boolean autoSave = false;
 
 	public static void main(String[] args) {
-		Thread t = new Thread(new Ex13_7());
+		Thread t = new Thread(new Ex13_7()); // Thread(Runnable r)
 		t.setDaemon(true);		// 이 부분이 없으면 종료되지 않는다.
 		t.start();
 
@@ -21,7 +21,7 @@ class Ex13_7 implements Runnable  {
 	}
 
 	public void run() {
-		while(true) {
+		while(true) {  // 무한루프 
 			try { 
 				Thread.sleep(3 * 1000); // 3초마다
 			} catch(InterruptedException e) {}

@@ -5,15 +5,15 @@ import java.util.*;
 
 class Ex14_2 {
 	public static void main(String[] args) {
-		Supplier<Integer>  s = ()-> (int)(Math.random()*100)+1;
-		Consumer<Integer>  c = i -> System.out.print(i+", "); 
-		Predicate<Integer> p = i -> i%2==0; 
+		Supplier<Integer>  s = ()-> (int)(Math.random()*100)+1;  // 1~100 난수
+		Consumer<Integer>  c = i -> System.out.print(i+", ");  // 출력
+		Predicate<Integer> p = i -> i%2==0;  // 짝수인지 검사 
 		Function<Integer, Integer> f = i -> i/10*10; // i의 일의 자리를 없앤다.
 		
 		List<Integer> list = new ArrayList<>();	
-		makeRandomList(s, list);
+		makeRandomList(s, list);  // list를 랜덤값으로 채운다.
 		System.out.println(list);
-		printEvenNum(p, c, list);
+		printEvenNum(p, c, list); // 짝수 출력 
 		List<Integer> newList = doSomething(f, list);
 		System.out.println(newList);
 	}
@@ -31,7 +31,7 @@ class Ex14_2 {
 	static <T> void printEvenNum(Predicate<T> p, Consumer<T> c, List<T> list) {
 		System.out.print("[");
 		for(T i : list) {
-			if(p.test(i))
+			if(p.test(i)) // 짝수인지 검사
 				c.accept(i);
 		}	
 		System.out.println("]");

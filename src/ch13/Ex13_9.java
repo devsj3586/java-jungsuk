@@ -22,6 +22,11 @@ class ThreadEx9_1 extends Thread {
 			System.out.println(i--);
 			for(long x=0;x<2500000000L;x++); // 시간 지연
 		}
+		System.out.println("isInterrupted():"+ this.isInterrupted()); // true
+		System.out.println("isInterrupted():"+ this.isInterrupted()); // true
+		// isInterrupted()와 달리 interrupted()는 interrupted라는 상태변수를 false로 초기화 
+		System.out.println("isInterrupted():"+ Thread.interrupted()); // true
+		System.out.println("isInterrupted():"+ Thread.interrupted()); // false
 		System.out.println("카운트가 종료되었습니다.");
 	} 
 }

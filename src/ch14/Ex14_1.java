@@ -11,8 +11,10 @@ class Ex14_1 {
 	}
 
 	static MyFunction getMyFunction() { // 반환 타입이 MyFunction인 메서드 
-		MyFunction f = () -> System.out.println("f3.run()");
-		return f;
+//		MyFunction f = () -> System.out.println("f3.run()");
+//		return f;
+		return () -> System.out.println("f3.run()");
+		 
 	}
 
 	public static void main(String[] args) {
