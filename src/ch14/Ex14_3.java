@@ -8,7 +8,7 @@ class Ex14_3 {
 		Function<Integer, String>	g  = (i) -> Integer.toBinaryString(i);
 
 		Function<String, String>    h  = f.andThen(g);
-		Function<Integer, Integer>  h2 = f.compose(g);
+		Function<Integer, Integer>  h2 = f.compose(g);  //== g.andThen(f)
 
 		System.out.println(h.apply("FF")); // "FF" → 255 → "11111111"
 		System.out.println(h2.apply(2));   // 2 → "10" → 16
@@ -24,12 +24,13 @@ class Ex14_3 {
 		Predicate<Integer> all = notP.and(q.or(r));
 		System.out.println(all.test(150));       // true
 
-		String str1 = "abc";
-		String str2 = "abc";
+		String str1 = new String ("abcd");
+		String str2 = new String("abc");
 		
 		// str1과 str2가 같은지 비교한 결과를 반환
 		Predicate<String> p2 = Predicate.isEqual(str1); 
-		boolean result = p2.test(str2);   
+		// boolean result = str1.equals(str2);
+		boolean result = Predicate.isEqual(str1).test(str2);   
 		System.out.println(result);
 	}
 }

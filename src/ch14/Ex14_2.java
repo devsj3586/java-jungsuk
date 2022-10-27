@@ -18,11 +18,12 @@ class Ex14_2 {
 		System.out.println(newList);
 	}
 
+	// Function<Integer, Integer> f = i -> i/10*10; // i의 일의 자리를 없앤다.
 	static <T> List<T> doSomething(Function<T, T> f, List<T> list) {
 		List<T> newList = new ArrayList<T>(list.size());
 
 		for(T i : list) {
-			newList.add(f.apply(i));
+			newList.add(f.apply(i)); // 일의 자리를 없애서 새로운  list에 저장
 		}	
 
 		return newList;

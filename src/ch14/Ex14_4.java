@@ -10,8 +10,13 @@ class Ex14_4 {
 
 		// list의 모든 요소를 출력
 		list.forEach(i->System.out.print(i+","));
+//		System.out.println(list);
+//		Iterator it = list.iterator();
+//		while(it.hasNext()) {
+//			System.out.println(it.next());
+//		}
 		System.out.println();
-
+		
 		// list에서 2 또는 3의 배수를 제거한다.
 		list.removeIf(x-> x%2==0 || x%3==0);
 		System.out.println(list);
@@ -28,5 +33,9 @@ class Ex14_4 {
 		// map의 모든 요소를 {k,v}의 형식으로 출력한다.
 		map.forEach((k,v)-> System.out.print("{"+k+","+v+"},"));
 		System.out.println();
+//		Iterator it = map.entrySet().iterator();
+//		while(it.hasNext()) {
+//			System.out.println(it.next());
+//		}
 	}
 }
