@@ -23,8 +23,8 @@ class Ex14_8 {
 		Optional.of("456").map(Integer::parseInt)
 					      .ifPresent(x->System.out.printf("result3=%d%n",x));
 
-		OptionalInt optInt1  = OptionalInt.of(0);   // 0阑 历厘
-		OptionalInt optInt2  = OptionalInt.empty(); // 后 按眉甫 积己
+		OptionalInt optInt1  = OptionalInt.of(0);   // 0阑 历厘 isPresent: ture
+		OptionalInt optInt2  = OptionalInt.empty(); // 后 按眉甫 积己 isPreseont : false
 
 		System.out.println(optInt1.isPresent());   // true
 		System.out.println(optInt2.isPresent());   // false

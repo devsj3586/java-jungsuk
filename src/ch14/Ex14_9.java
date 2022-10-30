@@ -10,7 +10,9 @@ class Ex14_9 {
 			"OptionalDouble", "IntStream", "count", "sum"
 		};
 
-		Stream.of(strArr).forEach(System.out::println);
+		Stream.of(strArr)
+		.parallel() // 병렬 처리
+		.forEachOrdered(System.out::println);
 
 		boolean noEmptyStr = Stream.of(strArr).noneMatch(s->s.length()==0);
 		Optional<String> sWord = Stream.of(strArr)
@@ -18,8 +20,11 @@ class Ex14_9 {
 
 		System.out.println("noEmptyStr="+noEmptyStr);
 		System.out.println("sWord="+ sWord.get());
-
-		// Stream<String>
+		
+		// Stream<String> 을 Stream<IntStream>으로 변환. (s) -> s.length
+//		Stream<IntStream> intStream1 = Stream.of(strArr).map(String::length);
+		
+		// Stream<String> IntStream으로 변환 . IntStream 기본형 스트림
 		IntStream intStream1 = Stream.of(strArr).mapToInt(String::length);
 		IntStream intStream2 = Stream.of(strArr).mapToInt(String::length);
 		IntStream intStream3 = Stream.of(strArr).mapToInt(String::length);

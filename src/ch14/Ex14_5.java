@@ -15,6 +15,7 @@ class Ex14_5 {
 						new Student("감자바", 3, 180)
 					);
 
+//		studentStream.sorted(Comparator.comparing(Student::getBan) // 반별 정렬
 		studentStream.sorted(Comparator.comparing(Student::getBan) // 반별 정렬
 		 	.thenComparing(Comparator.naturalOrder()))     	// 기본 정렬
 			.forEach(System.out::println);

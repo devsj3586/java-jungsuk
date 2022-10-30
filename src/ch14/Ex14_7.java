@@ -13,9 +13,9 @@ class Ex14_7 {
 //		Stream<Stream<String>> strStrmStrm = strArrStrm.map(Arrays::stream);
 		Stream<String> strStrm = strArrStrm.flatMap(Arrays::stream);
 
-		strStrm.map(String::toLowerCase)
-			   .distinct()
-			   .sorted()
+		strStrm.map(String::toLowerCase) // 스트림의 요소를 모두 소문자로 변경
+			   .distinct() // 중복제거
+			   .sorted()	// 정렬
 			   .forEach(System.out::println);
 		System.out.println();
 
@@ -25,7 +25,7 @@ class Ex14_7 {
 		};
 
 		Stream<String> lineStream = Arrays.stream(lineArr);
-		lineStream.flatMap(line -> Stream.of(line.split(" +")))
+		lineStream.flatMap(line -> Stream.of(line.split(" +"))) // 정규식,  하나 이상의 공백
 			.map(String::toLowerCase)
 			.distinct()
 			.sorted()
